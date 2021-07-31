@@ -1,4 +1,4 @@
-site_name: base-template Documentation
+site_name: slides-git-flow-developer Documentation
 theme: 'material'
 markdown_extensions:
   - toc:
@@ -15,8 +15,8 @@ extra:
   font:
     text: 'Source Sans Pro'
 
-repo_name: 'hadenlabs/base-template'
-repo_url: 'https://github.com/hadenlabs/base-template'
+repo_name: 'hadenlabs/slides-git-flow-developer'
+repo_url: 'https://github.com/hadenlabs/slides-git-flow-developer'
 copyright: 'Copyright © 2021 <a href="https://hadenlabs.com">hadenlabs</a>'
 
 google_analytics:
