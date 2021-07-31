@@ -13,5 +13,7 @@ terraform.md
 *.tpl.md
 *.enc.yaml
 vendor
+public
 out
 .vscode-test
+.cache

@@ -28,6 +28,8 @@ PYTHON_VERSION=3.8.0
 NODE_VERSION=14.16.1
 PYENV_NAME="${PROJECT}"
 GIT_IGNORES:=python,node,go,zsh
+GIT_IGNORES_CUSTOM:= public \
+	bin
 GI:=gi
 
 # issues reviewers
@@ -79,6 +81,7 @@ setup:
 	make python.setup
 	make python.precommit
 	@[ -e ".env" ] || cp -rf .env.example .env
+	make yarn.setup
 	make git.setup
 	@echo ${MESSAGE_HAPPY}
 
