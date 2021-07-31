@@ -12,6 +12,7 @@ repos:
             .+\.vendor\/.*$|
             .+\.node_modules\/.*$|
             .+\.lock$|
+            .+\.mdx$|
           )$
   - repo: https://github.com/alessandrojcm/commitlint-pre-commit-hook
     rev: v5.0.0
