@@ -22,7 +22,7 @@ TEAM := hadenlabs
 REPOSITORY_DOMAIN:=github.com
 REPOSITORY_OWNER:=${TEAM}
 AWS_VAULT ?= ${TEAM}
-PROJECT := base-template
+PROJECT := slides-git-flow-developer
 
 PYTHON_VERSION=3.8.0
 NODE_VERSION=14.16.1

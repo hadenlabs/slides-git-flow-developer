@@ -1,1 +1,1 @@
-# Welcome to base-template documentation
+# Welcome to slides-git-flow-developer documentation
