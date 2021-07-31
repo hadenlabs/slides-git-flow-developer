@@ -12,7 +12,9 @@ Hadenlabs | [hadenlabs](https://github.com/hadenlabs)
 
 ## Agenda
 
-- Que es un Flujo de Trabajo.
+- Git.
+- Pre commit.
+- Flujo de Trabajo.
 - Git Flow.
 - Ejemplo de Uso.
 - CHANGELOG.
@@ -20,9 +22,393 @@ Hadenlabs | [hadenlabs](https://github.com/hadenlabs)
 
 ---
 
+### Que es Git?
+
+- Sistema de Control de Versiones Open Source
+- Multiplataforma
+- Distribuido
+- Creado Por Linus Torvals.
+
+
+---
+
+
+### Linus Torvalds
+
+
+![linus torvalds](assets/images/torvaldsnvidia.jpg)
+
+---
+
+
+### Ventajas de Git
+
+- Velocidad
+- Completamente Distribuido
+- Capaz de Manejar Grandes Proyectos (Kernel de Linux)
+- Fuerte apoyo al desarrollo no lineal
+
+---
+
+### Sistema de Control de Versiones
+
+Es un sistema que registra los cambios realizados sobre
+un archivo o conjunto de archivos a lo largo del tiempo.
+
+---
+
+### Tipos de Sistemas de Control de Versiones
+
+- Sistema de Control de Versiones Locales.
+- Sistema de Control de Versiones Centralizados.
+- Sistema de Control de Versiones Distribuidos.
+
+---
+
+### Sistema de Control de Version Local
+
+---
+
+![version local](assets/images/version_local.png)
+
+---
+
+### Sistema de Control de Version Centralizado
+
+---
+
+![version centralizado](assets/images/version_centralizado.png)
+
+---
+
+### Sistema de Control de Version Distribuido
+
+---
+
+![version distribuido](assets/images/versiones_distribuidos.png)
+
+---
+
+### Estados de Git
+
+---
+
+![lifecycle.png](assets/images/lifecyclefile.png)
+
+---
+
+### Install
+
+---
+
+## windows
+
+```bash
+download http://git-scm.com/ next next
+```
+
+---
+
+## linux
+
+```bash
+Debian: sudo apt-get install git
+Red Hat: sudo yum install git
+```
+
+---
+
+## OS X
+
+```bash
+brew update
+brew install git
+```
+
+---
+
+### Personalizando Git
+
+- Git Config
+- Git Ignore
+
+---
+
+### Git Config
+
+- [Example](https://raw.githubusercontent.com/hadenlabs/zsh-git/develop/conf/.gitconfig)
+
+---
+
+#### config
+
+```bash
+git config -e
+git config --global -e
+```
+
+---
+
+### Git Ignore
+
+- [Example](https://raw.githubusercontent.com/hadenlabs/zsh-git/develop/bin/gi)
+
+---
+
+#### Ignore File
+
+```bash
+echo "*.pyc"  >> .gitignore
+echo "*.tar.gz"  >> .gitignore
+echo "*.log"  >> .gitignore
+```
+
+---
+
+### Terminology
+
+#### Origin
+
+- El nombre por defecto que hace referencia al repositorio remoto.
+
+#### local
+
+- La version que tienes clonada de origin.
+
+---
+
+### Terminology
+
+#### master or main
+
+- Nombre por defecto del branch principal.
+
+
+---
+
+#### new branch
+
+- Genera una copia desde el punto donde te encuentras (Branch, Commit).
+
+---
+
+### Branches
+
+Un branch es una simple referencia a un commit
+
+#### Create a new branch:
+
+```bash
+  git branch <new-branch>
+```
+
+---
+
+#### Delete a branch:
+
+```bash
+  git branch -d|-D <new-branch>
+```
+
+---
+
+#### Rename a branch:
+
+```bash
+  git branch -m <old-name> <new-branch>
+```
+
+---
+
+### Branches
+
+#### List branches:
+
+```bash
+  git branch -r|-a
+```
+
+---
+
+#### Move into (checkout) a branch:
+
+```bash
+  git checkout <branch>
+```
+
+---
+
+#### Create a branch and check it out:
+
+```bash
+  git checkout -b <branch>
+```
+
+---
+
+### Merging
+
+Es pasar cambios de un branch hacia otro
+
+---
+
+#### Merge a branch:
+
+```bash
+  git checkout main
+  git merge feature
+```
+
+---
+
+### Conflicts
+
+```bash
+  git config --global -e merge.tool meld
+```
+
+---
+
+![meld](assets/images/meld.png)
+
+---
+
+### Repository
+
+#### Tipos de Repositorios
+
+- Repositorio Local
+- Repositorio Bare(Remote)
+
+---
+
+### Repositorio local
+
+---
+
+#### Create Repo
+
+```bash
+git init <<path>>
+```
+
+---
+
+#### Clone Repo
+
+```bash
+git clone <<ssh remote/https>>
+```
+
+---
+
+### Repositorio Bare
+
+---
+
+#### Create Repo (local|server)
+
+```bash
+git init --bare <<path.git>>
+```
+
+---
+
+#### Add repository remote:
+
+##### create key ssh
+
+```bash
+  ssh-keygen -t rsa -C "your_email@youremail.com"
+```
+
+---
+
+##### Add repository
+
+```bash
+  git remote add origin <<ssh remote/https>>
+```
+
+---
+
+### Management Remote
+
+#### Pull(Download):
+
+```bash
+  git pull origin <branch>
+```
+
+---
+
+#### Push(Upload):
+
+```bash
+  git push origin <branch>
+```
+
+---
+
+### Commands Git
+
+---
+
+### git stash
+
+```bash
+  git stash save <title>
+```
+
+```bash
+  git stash list
+```
+
+```bash
+  git stash apply <id-stash>
+```
+
+```bash
+  git stash clear
+```
+
+---
+
+### Diff branch
+
+```bash
+  git diff <branch|hash> <branch|hash>
+  git diff.tool <branch|hash> <branch|hash>
+```
+
+#### Arguments
+
+- --only-name
+- ...
+
+---
+
+### Tools
+
+#### Install
+
+- https://github.com/scmbreeze/scm_breeze
+
+---
+
+### ZSH
+
+#### use load packages
+
+- antibody bundle hadenlabs/zsh-git
+
+---
+
 ## Flujo de Trabajo
 
-- El flujo de trabajo (workflow en inglés) es el estudio de los aspectos operacionales de una actividad de trabajo:
+---
+
+El flujo de trabajo (workflow en inglés) es el estudio de los aspectos operacionales de una actividad de trabajo:
 
 * Estructuracion de tareas.
 * Prioridad.
