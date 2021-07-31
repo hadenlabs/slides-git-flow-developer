@@ -228,14 +228,21 @@ title = "gitleaks config"
 # Global allowlist
 [allowlist]
   description = "Whitelisted files"
-    files = [
-      '''(.*?)(jpg|gif|png|doc|pdf|bin|mp3|mp4|mov|ttf|woff|woff2|eot|lock)$''',
-      '''^\.gitignore$''',
-      '''^\.gitleaks.toml$''',
-      '''^yarn.lock$''',
-      '''^vendor/(.*?)$''',
-      '''^node_modules/(.*?)$''',
-    ]
+  paths = [
+    '''^vendor/''',
+    '''^bower_components/''',
+    '''^public/js/bower_components/''',
+    '''^node_modules/''',
+    '''^theme/''',
+  ]
+  files = [
+    '''(.*?)(jpg|gif|png|doc|pdf|bin|mp3|mp4|mov|ttf|woff|woff2|eot|lock)$''',
+    '''^\.gitignore$''',
+    '''^\.gitleaks.toml$''',
+    '''^yarn.lock$''',
+    '''^vendor/(.*?)$''',
+    '''^node_modules/(.*?)$''',
+  ]
 
 [whitelist]
   description = "image and html allowlists"
