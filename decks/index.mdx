@@ -15,7 +15,11 @@ Hadenlabs | [hadenlabs](https://github.com/hadenlabs)
 - Git.
 - Pre commit.
 - Commits Semmantics.
-- Flujo de Trabajo.
+
+---
+
+## Agenda
+
 - Git Flow.
 - CHANGELOG.
 
@@ -253,7 +257,7 @@ Un branch es una simple referencia a un commit
 <CodeSurfer>
 
 ```bash
-  git checkout -b <branch>
+  git checkout -b branch_name
 ```
 
 </CodeSurfer>
@@ -312,7 +316,7 @@ Es pasar cambios de un branch hacia otro
 <CodeSurfer>
 
 ```bash
-git init <<path>>
+    git init path_name
 ```
 
 </CodeSurfer>
@@ -324,7 +328,7 @@ git init <<path>>
 <CodeSurfer>
 
 ```bash
-git clone <<ssh remote/https>>
+    git clone ssh remote | https
 ```
 
 </CodeSurfer>
@@ -340,7 +344,7 @@ git clone <<ssh remote/https>>
 <CodeSurfer>
 
 ```bash
-git init --bare <<path.git>>
+    git init --bare path.git
 ```
 
 </CodeSurfer>
@@ -349,19 +353,23 @@ git init --bare <<path.git>>
 
 #### Add repository remote:
 
-##### create key ssh
+#### create key ssh
 
+<CodeSurfer>
 ```bash
   ssh-keygen -t rsa -C "your_email@youremail.com"
 ```
+</CodeSurfer>
 
 ---
 
-##### Add repository
+#### Add repository
 
+<CodeSurfer>
 ```bash
-  git remote add origin <<ssh remote/https>>
+  git remote add origin ssh remote | https
 ```
+</CodeSurfer>
 
 ---
 
@@ -369,17 +377,25 @@ git init --bare <<path.git>>
 
 #### Pull(Download):
 
+<CodeSurfer>
+
 ```bash
-  git pull origin <branch>
+  git pull origin branch_name
 ```
+
+</CodeSurfer>
 
 ---
 
 #### Push(Upload):
 
+<CodeSurfer>
+
 ```bash
-  git push origin <branch>
+  git push origin branch_name
 ```
+
+</CodeSurfer>
 
 ---
 
@@ -389,30 +405,62 @@ git init --bare <<path.git>>
 
 ### git stash
 
+<CodeSurfer>
+
 ```bash
-  git stash save <title>
+  git stash save title
 ```
+
+</CodeSurfer>
+
+---
+
+### git stash
+
+<CodeSurfer>
 
 ```bash
   git stash list
 ```
 
+</CodeSurfer>
+
+---
+
+### git stash
+
+<CodeSurfer>
+
 ```bash
-  git stash apply <id-stash>
+  git stash apply id-stash
 ```
+
+</CodeSurfer>
+
+---
+
+### git stash
+
+<CodeSurfer>
 
 ```bash
   git stash clear
 ```
 
+</CodeSurfer>
+
 ---
 
-### Diff branch
+## Diff branch
+
+<CodeSurfer>
 
 ```bash
-  git diff <branch|hash> <branch|hash>
-  git diff.tool <branch|hash> <branch|hash>
+  git diff branch|hash branch|hash
+  git diff.tool branch|hash branch|hash
 ```
+
+</CodeSurfer>
 
 ---
 
@@ -423,38 +471,23 @@ git init --bare <<path.git>>
 
 ---
 
-### Tools
+## Tools
 
-#### Install
+---
+
+### scm_breeze
 
 - https://github.com/scmbreeze/scm_breeze
 
 ---
 
-### ZSH
+### zsh-git
 
-#### use load packages
-
-- antibody bundle hadenlabs/zsh-git
+#### [zsh-git](https://github.com/hadenlabs/zsh-git)
 
 ---
 
-## Flujo de Trabajo
-
----
-
-El flujo de trabajo (workflow en inglés) es el estudio de los aspectos operacionales de una actividad de trabajo:
-
-* Estructuracion de tareas.
-* Prioridad.
-* Implementacion.
-* Sincronizacion
-* Comunicacion
-* Finalizacion.
-
----
-
-### Git Flow
+## Git Flow
 
 - es un flujo de trabajo para la práctica de Desarrollo propuesto por Vicente Driessen
 
@@ -464,18 +497,21 @@ El flujo de trabajo (workflow en inglés) es el estudio de los aspectos operacio
 
 ---
 
-## Vincent Driessen
+### Vincent Driessen
 
-Ingeniero de Software Interesado en el desarrollo de Web y Herramientas de Programacion y Tecnologias (Python, Vim y Git)
+Software Engineer Python
+
+---
+
+#### links
 
 - [Web](http://nvie.com/about)
 - [@nvie](https://twitter.com/nvie)
 - [github.com/nvie](https://github.com/nvie)
 
-
 ---
 
-## Install
+### Install
 
 ---
 
@@ -503,7 +539,6 @@ yum install git-flow
 
 </CodeSurfer>
 
-
 ---
 
 ### Install Mac OS
@@ -516,7 +551,6 @@ brew install git-flow
 
 </CodeSurfer>
 
-
 ---
 
 ### Windows
@@ -526,6 +560,10 @@ brew install git-flow
 ---
 
 ## Init
+
+---
+
+### Commands
 
 <CodeSurfer>
 
@@ -537,18 +575,20 @@ git flow init
 
 ---
 
-## Ramas a trabajar
+### Branchs
 
-- Branch name for production releases
-- Branch name for "next release" development
+- Production
+- development
 
 ---
 
-## Feature
+### Feature
 
 - Ramas creadas para hacer nuevos desarrollos.
 
-### Ejemplos:
+---
+
+### Examples
 
 - Casos de Uso.
 - Tareas.
@@ -557,7 +597,7 @@ git flow init
 
 ---
 
-### Commands Feature
+#### Commands Feature
 
 <CodeSurfer>
 
@@ -577,13 +617,13 @@ git flow init
 
 - Un Entregable, Finalizado de un sprint.
 
-#### Ejemplos:
+*Ejemplos:*
 
 - Final de un Sprint.
 
 ---
 
-### Commands release
+#### Commands release
 
 <CodeSurfer>
 
@@ -599,17 +639,17 @@ git flow init
 
 ---
 
-### Hotfix
+#### Hotfix
 
 - son caracteristicas no deseadas que se tienen que Corregir inmediatamente.
 
-#### Ejemplos:
+*Ejemplos:*
 
-- Bugs en Production.
+* Bugs en Production.
 
 ---
 
-### Commands hotfix
+#### Commands hotfix
 
 <CodeSurfer>
 
@@ -629,7 +669,7 @@ git flow init
 
 ---
 
-## Commands support
+#### Commands support
 
 <CodeSurfer>
 
@@ -656,7 +696,7 @@ git flow init
 
 ### Semantics Commits
 
-A specification for adding human and machine readable meaning to commit messages
+<p>A specification for adding human and machine readable meaning to commit messages</p>
 
 #### [conventional commits](https://www.conventionalcommits.org/en/v1.0.0)
 
@@ -724,14 +764,9 @@ es un archivo que contiene los cambios hechos de un proyecto informático
     - Issue Link Titulo
     - Issue Link Titulo
 
-    ### 1.1.8 titulo de sprint (DATE)
-
-    - Issue Link Titulo
-    - Issue Link Titulo
 ```
 
 </CodeSurfer>
-
 
 ---
 
