@@ -76,7 +76,7 @@ const customTheme = {
       fontFamily: 'body',
       lineHeight: 'body',
       fontWeight: 'body',
-      fontSize: 64
+      fontSize: 50
     },
     p: {
       fontFamily: 'body',

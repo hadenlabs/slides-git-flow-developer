@@ -16,9 +16,7 @@ Hadenlabs | [hadenlabs](https://github.com/hadenlabs)
 - Pre commit.
 - Flujo de Trabajo.
 - Git Flow.
-- Pre commit.
 - CHANGELOG.
-- Referencias.
 
 ---
 
@@ -29,12 +27,11 @@ Hadenlabs | [hadenlabs](https://github.com/hadenlabs)
 - Distribuido
 - Creado Por Linus Torvals.
 
-
 ---
-
 
 ### Linus Torvalds
 
+---
 
 ![linus torvalds](assets/images/torvaldsnvidia.jpg)
 
@@ -104,7 +101,7 @@ un archivo o conjunto de archivos a lo largo del tiempo.
 ## windows
 
 ```bash
-download http://git-scm.com/ next next
+download http://git-scm.com/
 ```
 
 ---
@@ -214,9 +211,13 @@ Un branch es una simple referencia a un commit
 
 #### Rename a branch:
 
+<CodeSurfer>
+
 ```bash
   git branch -m <old-name> <new-branch>
 ```
+
+</CodeSurfer>
 
 ---
 
@@ -224,25 +225,37 @@ Un branch es una simple referencia a un commit
 
 #### List branches:
 
+<CodeSurfer>
+
 ```bash
   git branch -r|-a
 ```
+
+</CodeSurfer>
 
 ---
 
 #### Move into (checkout) a branch:
 
+<CodeSurfer>
+
 ```bash
   git checkout <branch>
 ```
+
+</CodeSurfer>
 
 ---
 
 #### Create a branch and check it out:
 
+<CodeSurfer>
+
 ```bash
   git checkout -b <branch>
 ```
+
+</CodeSurfer>
 
 ---
 
@@ -254,18 +267,25 @@ Es pasar cambios de un branch hacia otro
 
 #### Merge a branch:
 
+<CodeSurfer>
+
 ```bash
   git checkout main
   git merge feature
 ```
+</CodeSurfer>
 
 ---
 
 ### Conflicts
 
+<CodeSurfer>
+
 ```bash
   git config --global -e merge.tool meld
 ```
+
+</CodeSurfer>
 
 ---
 
@@ -288,17 +308,25 @@ Es pasar cambios de un branch hacia otro
 
 #### Create Repo
 
+<CodeSurfer>
+
 ```bash
 git init <<path>>
 ```
+
+</CodeSurfer>
 
 ---
 
 #### Clone Repo
 
+<CodeSurfer>
+
 ```bash
 git clone <<ssh remote/https>>
 ```
+
+</CodeSurfer>
 
 ---
 
@@ -308,9 +336,13 @@ git clone <<ssh remote/https>>
 
 #### Create Repo (local|server)
 
+<CodeSurfer>
+
 ```bash
 git init --bare <<path.git>>
 ```
+
+</CodeSurfer>
 
 ---
 
@@ -380,6 +412,8 @@ git init --bare <<path.git>>
   git diff <branch|hash> <branch|hash>
   git diff.tool <branch|hash> <branch|hash>
 ```
+
+---
 
 #### Arguments
 
@@ -674,5 +708,3 @@ es un archivo que contiene los cambios hechos de un proyecto informático
 ### Thank you
 
 [Hadenlabs ](https://github.com/hadenlabs)
-
-#### `</html>`
