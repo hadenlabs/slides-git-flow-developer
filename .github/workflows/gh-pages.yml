@@ -1,0 +1,59 @@
+# Continuous Delivery/Deployment
+name: cd
+
+on:
+  workflow_run:
+    workflows: ['lint-code']
+    types:
+      - completed
+
+  push:
+    branches:
+      - develop
+      - main
+
+    tags:
+      - '[0-9]+.[0-9]+.[0-9]+'
+      # https://semver.org/ proper release tags, more or less
+      - 'v[0-9]+.[0-9]+.[0-9]+'
+      # prerelease tags, more or less
+      - 'v[0-9]+.[0-9]+.[0-9]+-*'
+
+env:
+  TARGET_BRANCH: gh-pages
+  TARGET_CNAME: hadenlabs.github.io/slides-git-flow-developer
+  COMMIT_AUTHOR: "@dum-u"
+  COMMIT_EMAIL: "dum-u@hadenlabs.com"
+
+jobs:
+  cd:
+    runs-on: Ubuntu-20.04
+    name: gh-pages
+
+    steps:
+      - name: check out a copy of the repo
+        uses: actions/checkout@v2
+
+      - name: Setup Node
+        uses: actions/setup-node@v2
+        with:
+          node-version: '14'
+
+      - name: Install Yarn
+        run: npm install -g yarn
+
+      - name: Install dependencies
+        run: yarn install
+
+      - name: Building
+        run: yarn build
+
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GH_TOKEN }}
+          publish_dir: ./public
+          publish_branch: ${{ env.TARGET_BRANCH }}
+          cname: ${{ env.TARGET_CNAME }}
+          user_name: ${{ env.COMMIT_AUTHOR }}
+          user_email: ${{ env.COMMIT_EMAIL }}
