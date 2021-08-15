@@ -18,7 +18,8 @@
     "clean": "gatsby clean",
     "build": "gatsby build --prefix-paths",
     "serve": "gatsby serve --prefix-paths",
-    "gh-pages": "npx gh-pages -d public",
+    "predeploy": "yarn build",
+    "deploy": "gh-pages --dist ./public --branch gh-pages",
     "prebuild": "yarn clean",
     "prettier": "prettier --config=.github/linters/prettier.config.js --ignore-path=.github/linters/.prettierignore --list-different",
     "prettier:fix": "yarn prettier:lint --write=true",
@@ -59,6 +60,7 @@
     "eslint-plugin-import": "^2.22.1",
     "eslint-plugin-prettier": "^3.4.0",
     "eslint-plugin-promise": "^5.1.0",
+    "gh-pages": "^3.2.3",
     "prettier": "^2.2.1",
     "prettier-eslint": "^12.0.0"
   },
