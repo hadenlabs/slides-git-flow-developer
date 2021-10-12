@@ -154,7 +154,7 @@ title = "gitleaks config"
 
 [[rules]]
     description = "Env Var"
-    regex = '''(?i)(apikey|secret|key|api|password|pass|pw|host)=[0-9a-zA-Z-_.{}]{4,120}'''
+    regex = '''(?i)(apikey|secret|key|api|password|pass)=[0-9a-zA-Z-_.{}]{4,120}'''
     tags = ["env"]
     [rules.allowlist]
         description = "ignore value fake"
@@ -170,11 +170,14 @@ title = "gitleaks config"
         description = "ignore emails"
         regexes = [
             '''[a-zA-Z0-9._%+-]+@users.noreply.github.com''',
+            '''[a-zA-Z0-9._%+-]+@yopmail.com''',
             '''your_email@youremail.com''',
             '''git@github.com''',
             '''git@gitlab.com''',
             '''slovacus@gmail.com''',
+            '''luis@hadenlabs.com''',
             '''hola@hadenlabs.com''',
+            '''hello@hadenlabs.com''',
             '''support@hadenlbas.com''',
             '''support@hadenlabs.com''',
             '''dum-u@hadenlabs.com''',
@@ -241,6 +244,7 @@ title = "gitleaks config"
     '''^\.gitignore$''',
     '''^\.gitleaks.toml$''',
     '''^\.js.map$''',
+    '''^sonar-project.properties$''',
     '''^yarn.lock$''',
     '''^vendor/(.*?)$''',
     '''^node_modules/(.*?)$''',
@@ -248,12 +252,14 @@ title = "gitleaks config"
 
 [whitelist]
   description = "image and html allowlists"
-	files = [
+  files = [
     '''(.*?)(jpg|gif|png|doc|pdf|bin|mp3|mp4|mov|ttf|woff|woff2|eot|lock)$''',
+    '''^\.gitignore$''',
     '''^\.gitleaks.toml$''',
     '''^\.gitignore$''',
     '''^\.js.map$''',
     '''^yarn.lock$''',
+    '''^sonar-project.properties$''',
   ]
   paths = [
     '''^vendor/''',
