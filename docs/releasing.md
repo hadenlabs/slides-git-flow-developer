@@ -1,3 +1,6 @@
+<!-- Space: SlidesGitFlowDeveloper -->
+<!-- Title: Releasing -->
+
 # Releasing
 
 ## Bump a new version

@@ -1,3 +1,6 @@
+<!-- Space: SlidesGitFlowDeveloper -->
+<!-- Title: How To Contribute -->
+
 # How To Contribute
 
 Contributions to slides-git-flow-developer are welcome.
