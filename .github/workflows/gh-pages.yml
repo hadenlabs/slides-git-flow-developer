@@ -22,15 +22,14 @@ on:
 env:
   TARGET_BRANCH: gh-pages
   TARGET_CNAME: hadenlabs.github.io/slides-git-flow-developer
-  COMMIT_AUTHOR: "@dum-u"
-  COMMIT_EMAIL: "dum-u@hadenlabs.com"
-  COMMIT_MESSAGE: "ci: deploy github pages"
+  COMMIT_AUTHOR: '@dum-u'
+  COMMIT_EMAIL: 'dum-u@hadenlabs.com'
+  COMMIT_MESSAGE: 'ci: deploy github pages'
 
 jobs:
   cd:
     name: gh-pages
     runs-on: Ubuntu-20.04
-    if: ${{ github.event.workflow_run.conclusion == 'success' }}
 
     steps:
       - name: check out a copy of the repo
