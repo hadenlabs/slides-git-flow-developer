@@ -10,6 +10,10 @@ name: slides-git-flow-developer
 email:
   support: support@hadenlabs.com
 
+confluence:
+  space: SlidesGitFlowDeveloper
+  title: readme
+
 # Logo for this project
 #logo: docs/logo.png
 
@@ -37,6 +41,15 @@ badges:
     image: https://img.shields.io/badge/Keep%20A%20Changelog-1.0.0-%23E05735
     url: https://keepachangelog.com
 
+requirements: |-
+
+  This is a list of plugins that need to be installed previously to enjoy all the goodies of this configuration:
+
+  - [Docker](https://www.docker.com)
+  - [python](https://www.python.org)
+  - [taskfile](https://github.com/go-task/task)
+
+# Short description of this project
 description: |-
 
   slides-git-flow-developer for project
