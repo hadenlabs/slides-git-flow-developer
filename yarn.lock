@@ -5089,10 +5089,10 @@ eslint-plugin-jsx-a11y@^6.3.1:
     jsx-ast-utils "^3.1.0"
     language-tags "^1.0.5"
 
-eslint-plugin-prettier@^3.4.0:
-  version "3.4.0"
-  resolved "https://registry.yarnpkg.com/eslint-plugin-prettier/-/eslint-plugin-prettier-3.4.0.tgz#cdbad3bf1dbd2b177e9825737fe63b476a08f0c7"
-  integrity sha512-UDK6rJT6INSfcOo545jiaOwB701uAIt2/dR7WnFQoGCVl1/EMqdANBmwUaqqQ45aXprsTGzSa39LI1PyuRBxxw==
+eslint-plugin-prettier@^3.4.1:
+  version "3.4.1"
+  resolved "https://registry.yarnpkg.com/eslint-plugin-prettier/-/eslint-plugin-prettier-3.4.1.tgz#e9ddb200efb6f3d05ffe83b1665a716af4a387e5"
+  integrity sha512-htg25EUYUeIhKHXjOinK4BgCcDwtLHjqaxCDsMy5nbnUMkKFvIhMVCp+5GFUXQ4Nr8lBsPqtGAqBenbpFqAA2g==
   dependencies:
     prettier-linter-helpers "^1.0.0"
 
@@ -6078,7 +6078,7 @@ gatsby-page-utils@^0.9.1:
     lodash "^4.17.20"
     micromatch "^4.0.2"
 
-gatsby-plugin-catch-links@^2.1.0, gatsby-plugin-catch-links@^2.3.11:
+gatsby-plugin-catch-links@^2.1.0, gatsby-plugin-catch-links@^2.3.15:
   version "2.10.0"
   resolved "https://registry.yarnpkg.com/gatsby-plugin-catch-links/-/gatsby-plugin-catch-links-2.10.0.tgz#5ab86087367dc81be7a8c4b4db583be0b77e17ba"
   integrity sha512-r+YBR6ChWOwb0VygrjtS6nrz0fv5KyZiyL0aa/6Na4st4D+PHqml2nuYtLx0+otxjscSjJXk+7eg04YDGEeFng==
@@ -6308,7 +6308,7 @@ gatsby-telemetry@^1.10.2:
     node-fetch "^2.6.1"
     uuid "3.4.0"
 
-gatsby-theme-mdx-deck@^3.0.10, gatsby-theme-mdx-deck@^3.1.0:
+gatsby-theme-mdx-deck@^3.0.13, gatsby-theme-mdx-deck@^3.1.0:
   version "3.1.0"
   resolved "https://registry.yarnpkg.com/gatsby-theme-mdx-deck/-/gatsby-theme-mdx-deck-3.1.0.tgz#84c8d1bb6f6fcb017ae0542f15001a6b9d11ec71"
   integrity sha512-QKp41TmUtPLe5gTE2pIa6U+LJJe6gci1AuTN7HwBy3zke0f15Ebw0CmxIt0lZtTo13PC1CiYJtdO8hGT/q/BMg==
@@ -6338,7 +6338,7 @@ gatsby-theme-mdx-deck@^3.0.10, gatsby-theme-mdx-deck@^3.1.0:
     remark-unwrap-images "^1.0.0"
     theme-ui "^0.2.14"
 
-gatsby@^2.13.24, gatsby@^2.24.56:
+gatsby@^2.13.24, gatsby@^2.24.92:
   version "2.32.13"
   resolved "https://registry.yarnpkg.com/gatsby/-/gatsby-2.32.13.tgz#f4b1959b96d1fd853f9e6a2ce2451250e96bdeb4"
   integrity sha512-BYfiI/k+t8m/IzSkWZH8Cc0v7rJw6giSjG5sX25LWdfkQMqUvg/Gn6OC8BWwRPXnEwe7x0n5jbH+peO0p34ZHQ==
@@ -8772,10 +8772,10 @@ mdurl@^1.0.0:
   resolved "https://registry.yarnpkg.com/mdurl/-/mdurl-1.0.1.tgz#fe85b2ec75a59037f2adfec100fd6c601761152e"
   integrity sha1-/oWy7HWlkDfyrf7BAP1sYBdhFS4=
 
-mdx-deck@3.0.10:
-  version "3.0.10"
-  resolved "https://registry.yarnpkg.com/mdx-deck/-/mdx-deck-3.0.10.tgz#38d62de6d80ed496ba49a38619d299447b5fe15d"
-  integrity sha512-ef6igJmpxVvcY0EyTty+yaNhCtsX3eMlih0oDMohzxyrknCrboHvt2hfzBSMELYaczEp9+5t/7LKZVh4nPt39A==
+mdx-deck@3.0.13:
+  version "3.0.13"
+  resolved "https://registry.yarnpkg.com/mdx-deck/-/mdx-deck-3.0.13.tgz#fdb492e8f844f2b6a05cfdb368833b254cf0d45a"
+  integrity sha512-yKmls4BSEeR2g/kfanPAC+A8diagsQs0BFbGm41vi8UScKkE8LnlZDCypTdkhIcr0B0wU9Ft+fcL19WQABr8hQ==
   dependencies:
     "@mdx-deck/themes" "^3.0.8"
     chalk "^2.4.2"
@@ -8783,7 +8783,7 @@ mdx-deck@3.0.10:
     fs-extra "^8.1.0"
     gatsby "^2.13.24"
     gatsby-plugin-compile-es6-packages "^2.0.0"
-    gatsby-theme-mdx-deck "^3.0.10"
+    gatsby-theme-mdx-deck "^3.0.13"
     initit "^1.0.0-2"
     meow "^5.0.0"
     react "^16.8.6"
